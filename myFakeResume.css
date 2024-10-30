@@ -5,19 +5,55 @@
     font-size: 1rem;
     font-family: Helvetica, Arial, sans-serif;
     h1 {
-        color: aqua;
+        color: #560ceb; 
     }
-    h2 {
-        color: #58be9c;
+    h2, p {
+        color: #fafcfc;
     }
     h3 {
-        color: palevioletred;
+        color: #b60bdc;
         padding: 1rem 0;
     }
-    p {
-        color: black;
+
+    @media (max-width: 400px) {
+        .headshot {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+        }
+        h1 {
+            font-size: large;
+            position: relative;
+            top: 11em;
+            left: 8.5em;
+            width: 100px;
+            height: 40px;   
+        }
+        .PlanetSalesman {
+            font-size: large;
+            position: relative;
+            top: 11em;
+            left: 6em;
+            width: 180px;
+            height: 40px;  
+        }
     }
-    @media (max-width: 768px) {
+    @media (min-width:400) and (max-width: 768px) {
+        .headshot {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+        }
+        h1 {
+            font-size: xx-large;
+            position: relative;
+            top: 25rem;
+            left: 15rem;
+            width: 200px;
+            height: 100px;        
+        }
         .dropdown a {
             padding: 0.2rem 1rem;
             display: block;
@@ -27,51 +63,101 @@
         }
     }
     @media (min-width: 768px) {
-.header {
+header {
     background-image: url('images/darktome3.jpg');
     background-size: cover;
     background-position: center;
-    padding: 20px;
+    padding: 200px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     color: black;
+    width: 20px;
 }
-
 .logo {
+    position: fixed;
+    top: 0;
+    right: 0;
     font-size: 24px;
     font-weight: bold;
     max-width: 100%; 
     height: auto;
     padding: 1rem;
 }
-
+.navbar {
+    width: 1.3rem;
+    background-color: #00000010;
+    color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    position: absolute; /* Position the navbar independently */
+    top: 0; /* Align to the top */
+    left: 0;
+    text-overflow: ellipsis; 
+}
 .navbar ul {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
 }
-
-.navbar li {
-    position: relative;
-    margin: 0 15px;
+.side-nav ul li {
+    margin: 1rem 1rem;
+    padding-top: 4rem;
 }
-
 .navbar a {
-    display: inline-block; 
+    display: block; 
     text-decoration: none;
-    color: black;
-    padding: 0.6rem 1rem;
-    border: 0.1rem solid transparent;
-    border-radius: 0.3rem;
+    color: white;
+    padding: 0.6rem;
     background: #09f20d80;
     transition: background 0.3s, border-color 0.3s;
 }
-
 .navbar a:hover {
     background: rgba(200, 200, 200, 0.7);
     border-color: rgba(255, 255, 255, 0.5);
 }
-
+main {
+    padding: 20px;
+    margin: 0 0 0 250px;
+}
+body {
+    display: flex;
+    background-image: url('images/quasar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.headshot {
+    margin: 0 1rem 4rem 14rem;
+    width: 30%;
+}
+h1 {
+    font-size: xxx-large;
+    position: relative;
+    top: 3rem;
+    left: 19rem;
+    width: 300px;
+    height: 100px;        
+}
+.PlanetSalesman {
+    font-size: xx-large;
+    position: relative;
+    left: 16rem;
+    width: 350px;
+    height: 40px;  
+    margin-bottom: 1rem;
+}
+.dropdown a {
+    padding: 0.2rem 1rem;
+    display: block;
+    background: rgba(230, 230, 230, 0.5);
+    border-radius: 0.3rem;
+    transition: background 0.3s;
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -81,11 +167,9 @@
     padding: 10px 0;
     border-radius: 5px;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown-content a {
     padding: 0.6rem 1rem;
     display: block;
@@ -94,6 +178,13 @@
     background: rgba(230, 230, 230, 0.5);
     border-radius: 0.3rem;
     transition: background 0.3s;
+}
+.side-nav {
+    width: 250px;
+    position: fixed;
+}
+.titleMenu {
+    left: 0.7rem;
 }
 }
 }
