@@ -2,18 +2,98 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh; 
+    font-size: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
     h1 {
         color: aqua;
     }
     h2 {
-        color: aquamarine;
+        color: #58be9c;
     }
     h3 {
         color: palevioletred;
+        padding: 1rem 0;
     }
     p {
-        color: azure;
+        color: black;
     }
+    @media (max-width: 768px) {
+        .dropdown a {
+            padding: 0.2rem 1rem;
+            display: block;
+            background: rgba(230, 230, 230, 0.5);
+            border-radius: 0.3rem;
+            transition: background 0.3s;
+        }
+    }
+    @media (min-width: 768px) {
+.header {
+    background-image: url('images/darktome3.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 100%; 
+    height: auto;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar a {
+    display: inline-block; 
+    text-decoration: none;
+    color: black;
+    padding: 0.6rem 1rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.3rem;
+    background: #09f20d80;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(200, 200, 200, 0.7);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(230, 200, 200, 0.8);
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 0.6rem 1rem;
+    display: block;
+    color: black;
+    text-decoration: none;
+    background: rgba(230, 230, 230, 0.5);
+    border-radius: 0.3rem;
+    transition: background 0.3s;
+}
+}
 }
